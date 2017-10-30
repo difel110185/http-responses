@@ -1,0 +1,14 @@
+{
+    "name": "difel/http-responses",
+    "description": "This package will standarize HTTP Responses",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diego Felix",
+            "email": "difel110185@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

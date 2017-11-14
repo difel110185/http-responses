@@ -19,7 +19,7 @@ class ServerErrorResponse extends JsonResponse
     public function __construct(\Exception $exception, $message = null, $data = null, $status = 500, $headers = [], $options = 0)
     {
         $body = [
-            'message' => $message ?? $exception->getMessage(),
+            'message' => isset($message) ? $message : $exception->getMessage(),
             'data' => $data
         ];
 

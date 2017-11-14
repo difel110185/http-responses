@@ -20,7 +20,7 @@ class ValidationErrorResponse extends JsonResponse
     public function __construct(ValidationException $exception, $message = null, $status = 422, $headers = [], $options = 0)
     {
         $body = [
-            'message' => $message ?? $exception->getMessage(),
+            'message' => isset($message) ? $message : $exception->getMessage(),
             'data' => $exception->validator->getMessageBag()->getMessages()
         ];
 

@@ -23,6 +23,8 @@ class HTTPResponsesServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->make('Difel\HTTPResponses\ServerErrorResponse');
+        $this->app->make('Difel\HTTPResponses\SuccessResponse');
+        $this->app->make('Difel\HTTPResponses\ValidationErrorResponse');
     }
 }
